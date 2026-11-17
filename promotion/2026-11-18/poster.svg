@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+ <title>國語遊戲集合站｜南一・康軒・翰林</title>
+ <desc>三個版本，一站開玩。一至六年級上下學期、八大任務、單人或2隊4隊同屏練習。掃描QR Code開啟集合站。</desc>
+ <defs><clipPath id="illustration-frame"><rect x="30" y="235" width="1020" height="680" rx="38"/></clipPath></defs>
+ <rect width="1080" height="1350" fill="#f8f6ef"/>
+ <g font-family="Heiti TC, sans-serif" fill="#243b4a">
+  <rect x="60" y="37" width="235" height="37" rx="18.5" fill="#e5ebdf"/>
+  <text x="79" y="62" font-size="18" font-family="Arial, sans-serif" font-weight="700" letter-spacing="2">WORD PLAY CLUB</text>
+  <text x="1020" y="64" text-anchor="end" font-size="25" fill="#326f61">一～六年級｜上下學期</text>
+  <text x="54" y="159" font-size="86" font-weight="700" letter-spacing="1">國語遊戲集合站</text>
+  <text x="60" y="215" font-size="34" font-weight="700" fill="#326f61" letter-spacing="1">三個版本，一站開玩！</text>
+  <text x="1020" y="212" text-anchor="end" font-size="25" fill="#536572">免登入・免密碼</text>
+ </g>
+ <image x="30" y="235" width="1020" height="680" xlink:href="assets/three-learning-companions.png" clip-path="url(#illustration-frame)"/>
+ <g font-family="Heiti TC, sans-serif" text-anchor="middle" fill="#243b4a">
+  <rect x="70" y="923" width="270" height="53" rx="26.5" fill="#f7e7ba"/>
+  <text x="205" y="960" font-size="31" font-weight="700" letter-spacing="4">南一版</text>
+  <rect x="405" y="923" width="270" height="53" rx="26.5" fill="#dcece2"/>
+  <text x="540" y="960" font-size="31" font-weight="700" letter-spacing="4">康軒版</text>
+  <rect x="740" y="923" width="270" height="53" rx="26.5" fill="#e3e9d7"/>
+  <text x="875" y="960" font-size="31" font-weight="700" letter-spacing="4">翰林版</text>
+  <text x="207" y="1020" font-size="24">八大任務</text>
+  <circle cx="355" cy="1012" r="3" fill="#91a08d"/>
+  <text x="540" y="1020" font-size="24">單人／2隊／4隊</text>
+  <circle cx="730" cy="1012" r="3" fill="#91a08d"/>
+  <text x="875" y="1020" font-size="24">注音輔助閱讀</text>
+ </g>
+ <path d="M60 1047H1020" stroke="#d8dfd7" stroke-width="1.5"/>
+ <g font-family="Heiti TC, sans-serif" fill="#243b4a">
+  <text x="60" y="1108" font-size="38" font-weight="700">掃一下，一站找到國語遊戲！</text>
+  <text x="60" y="1156" font-size="25" fill="#326f61">先選年級、學期，再選課本版本</text>
+  <text x="60" y="1211" font-size="28" font-family="Arial, sans-serif" fill="#326f61">jerryyang2.github.io/</text>
+  <text x="60" y="1250" font-size="28" font-family="Arial, sans-serif" fill="#326f61">chinese-game-hub/</text>
+  <text x="60" y="1295" font-size="17" fill="#536572">注音範圍依版本設定；分組為同屏作答。</text>
+  <text x="60" y="1324" font-size="17" fill="#536572">自主製作的學習工具，非出版社官方網站。</text>
+ </g>
+ <rect x="774" y="1065" width="270" height="270" rx="24" fill="white" stroke="#d8dfd7" stroke-width="1.5"/>
+ <image x="786" y="1077" width="246" height="246" xlink:href="../../web/social/chinese-game-hub-qr.png" image-rendering="optimizeSpeed"/>
+</svg>

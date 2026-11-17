@@ -34,3 +34,11 @@ python3 -m http.server 8770 --directory dist
 ```
 
 不需要第三方套件。`web/`為來源、`dist/`為忽略追蹤的發布目錄；GitHub Actions於main更新時建置並發布Pages。
+
+## 社群宣傳素材
+
+- [1080 × 1350社群宣傳圖](https://jerryyang2.github.io/chinese-game-hub/social/chinese-game-hub-social.png)
+- [2160 × 2700高解析宣傳圖](https://jerryyang2.github.io/chinese-game-hub/social/chinese-game-hub-social-2x.png)
+- [集合站QR Code](https://jerryyang2.github.io/chinese-game-hub/social/chinese-game-hub-qr.png)
+
+貼文、原始插畫、可編輯SVG、產圖提示詞及驗收紀錄位於 `promotion/2026-11-18/`。原始插畫由內建image_gen產生，文字及QR在新SVG版型排版；所有交付圖檔均已解碼確認QR網址。海報可選擇性由 `scripts/render-social-poster.mjs` 重製，不影響無套件的網站建置。
