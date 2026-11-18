@@ -24,25 +24,5 @@
   try{await navigator.clipboard.writeText(url.href);document.querySelector('#share-status').textContent='已複製入口網址，包含目前選擇的年級與學期。';}
   catch{document.querySelector('#copy-fallback').hidden=false;const input=document.querySelector('#share-url');input.value=url.href;input.focus();input.select();document.querySelector('#share-status').textContent='請長按或選取下方網址複製。';}
  });
- // Keep the original recommended post as the only editorial source.
- let postText=null,postPromise=null;
- function loadPost(){return postPromise??=(async()=>{
-  const response=await fetch('./social/chinese-game-hub-post.txt');
-  if(!response.ok)throw new Error('post-unavailable');
-  const text=await response.text();if(!text.trim())throw new Error('empty-post');
-  postText=text;return text;
- })().catch(error=>{postPromise=null;throw error;});}
- loadPost().catch(()=>{});
- const copyPost=document.querySelector('#copy-post'),postStatus=document.querySelector('#post-status'),postFallback=document.querySelector('#post-fallback'),postArea=document.querySelector('#post-text');
- copyPost.addEventListener('click',async()=>{
-  copyPost.disabled=true;copyPost.setAttribute('aria-busy','true');postStatus.textContent='正在準備推薦貼文…';postFallback.hidden=true;
-  try{
-   const text=postText??await loadPost();
-   try{await navigator.clipboard.writeText(text);postStatus.textContent='已複製完整推薦貼文，包含集合站網址。可以貼到社群後自行調整。';}
-   catch{postFallback.hidden=false;postArea.value=text;postArea.focus();postArea.select();postStatus.textContent='請長按或選取下方完整貼文複製。';}
-  }catch{postStatus.textContent='貼文暫時無法讀取，請再試一次，或開啟上方貼文文字檔。';}
-  finally{copyPost.disabled=false;copyPost.removeAttribute('aria-busy');}
- });
- document.querySelectorAll('[download]').forEach(link=>link.addEventListener('click',()=>{postStatus.textContent='已開始下載高解析宣傳圖；若瀏覽器顯示圖片，可長按或另存圖片。';}));
  update();
 })();
