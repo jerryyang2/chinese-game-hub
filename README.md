@@ -42,3 +42,5 @@ python3 -m http.server 8770 --directory dist
 - [集合站QR Code](https://jerryyang2.github.io/chinese-game-hub/social/chinese-game-hub-qr.png)
 
 貼文、原始插畫、可編輯SVG、產圖提示詞及驗收紀錄位於 `promotion/2026-11-18/`。原始插畫由內建image_gen產生，文字及QR在新SVG版型排版；所有交付圖檔均已解碼確認QR網址。海報可選擇性由 `scripts/render-social-poster.mjs` 重製，不影響無套件的網站建置。
+
+集合站導覽列的「分享素材」可直接前往宣傳區：下載2160 × 2700含QR Code的PNG，或複製完整推薦貼文。剪貼簿不可用時顯示手動選取全文的欄位，也提供文字檔連結。網站建置時，會從 `promotion/2026-11-18/推薦貼文.txt` 複製出發布用文字檔，保持單一文案來源；編修貼文後需重新建置。
