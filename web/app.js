@@ -19,6 +19,19 @@
  }
  document.querySelectorAll('[data-grade]').forEach(b=>b.addEventListener('click',()=>{grade=Number(b.dataset.grade);update();}));
  document.querySelectorAll('[data-semester]').forEach(b=>b.addEventListener('click',()=>{semester=b.dataset.semester;update();}));
+ // Record entry clicks without blocking navigation; only curriculum choices are sent.
+ document.querySelectorAll('[data-version]').forEach(link=>link.addEventListener('click',()=>{
+  const gameVersion=link.dataset.version;
+  if(!Object.prototype.hasOwnProperty.call(versions,gameVersion)) return;
+  try{
+   if(typeof window.gtag==='function') window.gtag('event','game_version_click',{
+    game_version:gameVersion,
+    grade:String(grade),
+    semester,
+    transport_type:'beacon'
+   });
+  }catch{}
+ }));
  document.querySelector('#share').addEventListener('click',async()=>{
   const url=new URL(location.href);url.hash='';
   try{await navigator.clipboard.writeText(url.href);document.querySelector('#share-status').textContent='已複製入口網址，包含目前選擇的年級與學期。';}
