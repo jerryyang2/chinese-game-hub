@@ -1,0 +1,41 @@
+name: Capture promotion screenshots
+
+on:
+  push:
+    paths:
+      - ".github/workflows/capture-promotion-screenshots.yml"
+      - "scripts/capture-content-screenshots.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install browser
+        run: |
+          npm init -y
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Capture website content
+        run: node scripts/capture-content-screenshots.mjs
+
+      - name: Save screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add promotion/2026-11-22/content
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: add Threads content screenshots"
+            git push
+          fi
