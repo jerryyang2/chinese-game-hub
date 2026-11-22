@@ -1,6 +1,6 @@
 (() => {
  'use strict';
- const versions={nani:'https://jerryyang2.github.io/nani-grade-six-mondrian/',kangxuan:'https://jerryyang2.github.io/kangxuan-chinese-arena/',hanlin:'https://hanlin-language-arena-123.asterina-co.chatgpt.site/'};
+ const versions={nani:'https://jerryyang2.github.io/nani-grade-six-mondrian/',kangxuan:'https://jerryyang2.github.io/kangxuan-chinese-arena/',hanlin:'https://jerryyang2.github.io/hanlin-chinese-arena/'};
  const key='chinese-game-hub-preferences',labels=['','一','二','三','四','五','六'];
  const validGrade=value=>/^[1-6]$/.test(String(value));
  let saved={};try{saved=JSON.parse(localStorage.getItem(key))||{};}catch{}
